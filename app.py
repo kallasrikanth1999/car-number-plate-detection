@@ -9,7 +9,7 @@ import os
 import wget
 import time
 ## CFG
-cfg_model_path = "models/YoloTrained.pt" 
+cfg_model_path = "models/YoloTrained (1).pt" 
 
 cfg_enable_url_download = True
 if cfg_enable_url_download:
