@@ -8,7 +8,7 @@ from datetime import datetime
 import os
 import wget
 import time
-
+import cv2
 ## CFG
 cfg_model_path = "models/last.pt" 
 
