@@ -9,7 +9,7 @@ import os
 import wget
 import time
 ## CFG
-cfg_model_path = "models/Yolotrained.pt" 
+cfg_model_path = "models/YoloTrained.pt" 
 
 cfg_enable_url_download = True
 if cfg_enable_url_download:
@@ -34,7 +34,7 @@ def imageInput(device, src):
                 f.write(image_file.getbuffer())
 
             #call Model prediction--
-            model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/Yolotrained.pt', force_reload=True) 
+            model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/YoloTrained.pt', force_reload=True) 
             model.cuda() if device == 'cuda' else model.cpu()
             pred = model(imgpath)
             pred.render()  # render bbox in image
@@ -61,7 +61,7 @@ def imageInput(device, src):
         with col2:            
             if image_file is not None and submit:
                 #call Model prediction--
-                model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/Yolotrained.pt', force_reload=True) 
+                model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/YoloTrained.pt', force_reload=True) 
                 pred = model(image_file)
                 pred.render()  # render bbox in image
                 for im in pred.ims:
